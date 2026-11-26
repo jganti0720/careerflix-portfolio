@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Professional Journey of Jasmin Ganti</title>
+	<style>
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			background: #242019;
+			color: #392c1d;
+			font-family: Georgia, serif;
+		}
+		header {
+			text-align: center;
+			padding: 35px 15px 20px;
+			color: #e8d7b0;
+		}
+		header h1 {
+			font-size: clamp(25px, 5vw, 42px);
+			font-weight: normal;
+			letter-spacing: 2px;
+		}
+		header p { font-style: italic; color: #c5b48f; }
+		.map {
+			position: relative;
+			width: min(1100px, 96%);
+			height: 720px;
+			margin: 20px auto 40px;
+			overflow: hidden;
+			border: 10px solid #73532e;
+			border-radius: 5px;
+			background:
+				radial-gradient(ellipse at 20% 20%, #f4e6bd, transparent 55%),
+				radial-gradient(ellipse at 80% 80%, #c6a875, transparent 65%),
+				#e4d0a4;
+			box-shadow: 0 10px 45px #0009;
+		}
+		.map::before {
+			content: "";
+			position: absolute;
+			inset: 15px;
+			border: 2px dashed #94754b;
+			pointer-events: none;
+		}
+		.map-title {
+			position: absolute;
+			top: 20px;
+			left: 0;
+			right: 0;
+			text-align: center;
+			font-size: 25px;
+			font-style: italic;
+			z-index: 2;
+		}
+		.paths { position: absolute; inset: 0; width: 100%; height: 100%; }
+		.paths path {
+			fill: none;
+			stroke: #86633b;
+			stroke-width: 4;
+			stroke-dasharray: 8 10;
+			opacity: .8;
+		}
+		.landmark {
+			position: absolute;
+			transform: translate(-50%, -50%);
+			border: 2px solid #76542c;
+			border-radius: 50%;
+			background: #f0dfb7;
+			color: #49341f;
+			width: 65px;
+			height: 65px;
+			font-size: 25px;
+			cursor: pointer;
+			box-shadow: 0 3px 8px #49341f66;
+			transition: .25s;
+			z-index: 3;
+		}
+		.landmark:hover,
+		.landmark:focus-visible {
+			transform: translate(-50%, -50%) scale(1.2);
+			background: #fff1c9;
+			box-shadow: 0 0 18px #fff1c9;
+			outline: none;
+		}
+		.label {
+			position: absolute;
+			transform: translateX(-50%);
+			font-size: 13px;
+			font-weight: bold;
+			text-align: center;
+			width: 135px;
+			color: #49341f;
+			pointer-events: none;
+			z-index: 2;
+		}
+		.overlay {
+			display: none;
+			position: fixed;
+			inset: 0;
+			background: #000b;
+			z-index: 10;
+			align-items: center;
+			justify-content: center;
+			padding: 15px;
+		}
+		.overlay.active { display: flex; }
+		.popup {
+			background: #ead8ae;
+			border: 5px double #87653d;
+			max-width: 520px;
+			width: 100%;
+			padding: 30px;
+			max-height: 85vh;
+			overflow-y: auto;
+			box-shadow: 0 10px 40px #0008;
+		}
+		.popup h2 { margin-top: 0; font-size: 25px; }
+		.popup .date { font-style: italic; color: #75532f; }
+		.popup li { margin: 12px 0; line-height: 1.5; }
+		.close {
+			float: right;
+			border: none;
+			background: transparent;
+			font-size: 25px;
+			cursor: pointer;
+			color: #49341f;
+		}
+		.actions { text-align: center; padding-bottom: 35px; }
+		.actions button {
+			padding: 12px 20px;
+			margin: 5px;
+			border: 1px solid #d3b77f;
+			background: #e4d0a4;
+			color: #392c1d;
+			cursor: pointer;
+			font-family: Georgia, serif;
+		}
+		@media (max-width: 600px) {
+			.map { height: 780px; }
+			.landmark { width: 53px; height: 53px; font-size: 21px; }
+			.label { font-size: 11px; width: 105px; }
+		}
+		@media print {
+			body { background: white; }
+			header { color: black; }
+			.map { box-shadow: none; }
+			.actions, .overlay { display: none !important; }
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>The Professional Journey of Jasmin Ganti</h1>
+		<p>A journey through clinical documentation, education,<br>
+			implementation, and healthcare technology</p>
+	</header>
+	<main class="map" aria-label="Interactive map of career experiences">
+		<div class="map-title">The Map of a Clinical Career</div>
+		<svg class="paths" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+			<path d="M130 570 C250 520 200 440 340 410 S500 320 420 250 S600 180 680 250 S780 390 850 340 S790 500 650 570" />
+		</svg>
+		<button class="landmark" style="left:13%;top:81%" data-job="scribe" aria-label="ScribeAmerica experience">✒</button>
+		<div class="label" style="left:13%;top:86%">The Training Grounds</div>
+		<button class="landmark" style="left:34%;top:59%" data-job="superior" aria-label="Superior Emergency Physicians experience">⚕</button>
+		<div class="label" style="left:34%;top:64%">Emergency Command</div>
+		<button class="landmark" style="left:43%;top:34%" data-job="iscribe" aria-label="iScribeHealth experience">⚙</button>
+		<div class="label" style="left:43%;top:39%">Implementation Workshop</div>
+		<button class="landmark" style="left:66%;top:35%" data-job="ldmts" aria-label="LDMTS experience">📜</button>
+		<div class="label" style="left:66%;top:40%">Quality Archives</div>
+		<button class="landmark" style="left:85%;top:49%" data-job="codex" aria-label="Codex Group experience">🎓</button>
+		<div class="label" style="left:85%;top:54%">Education Academy</div>
+		<button class="landmark" style="left:65%;top:81%" data-job="lucky" aria-label="Lucky Lady Motel experience">🏛</button>
+		<div class="label" style="left:65%;top:86%">Operations Estate</div>
+		<button class="landmark" style="left:88%;top:81%" data-job="cvs" aria-label="CVS Oak Street Health experience">🏥</button>
+		<div class="label" style="left:88%;top:86%">Clinical Technology</div>
+	</main>
+	<div class="actions">
+		<button type="button" onclick="window.print()">Print Career Map</button>
+	</div>
+	<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+		<div class="popup">
+			<button class="close" type="button" onclick="closePopup()" aria-label="Close">&times;</button>
+			<h2 id="popupTitle"></h2>
+			<p class="date" id="popupDate"></p>
+			<ul id="popupDetails"></ul>
+		</div>
+	</div>
+	<script>
+		const experiences = {
+			scribe: {
+				title: "ScribeAmerica",
+				date: "2013 – 2018 | Senior Chief Scribe",
+				details: [
+					"Led recruiting, onboarding, and training of 100+ medical scribes.",
+					"Reduced new-hire ramp-up time by 30%.",
+					"Developed standardized clinical documentation protocols.",
+					"Mentored teams on clinical workflows and EHR navigation."
+				]
+			},
+			superior: {
+				title: "Superior Emergency Physicians",
+				date: "2018 – 2020 | Lead Medical Scribe",
+				details: [
+					"Implemented standardized end-of-shift summaries.",
+					"Reduced provider rework time by 50%.",
+					"Improved patient tracking and provider handoffs."
+				]
+			},
+			iscribe: {
+				title: "iScribeHealth",
+				date: "2021 – 2022 | Implementation Project Manager",
+				details: [
+					"Coordinated AI medical documentation implementations.",
+					"Captured provider preferences and workflow requirements.",
+					"Increased orthopedic clinic capacity by 40%.",
+					"Improved pre-visit and post-visit documentation workflows."
+				]
+			},
+			ldmts: {
+				title: "LDMTS Inc.",
+				date: "2022 – 2023 | Quality Management Specialist",
+				details: [
+					"Supported AI documentation quality and provider adoption.",
+					"Collaborated with providers across multiple specialties.",
+					"Developed structured provider feedback processes.",
+					"Improved documentation consistency and quality."
+				]
+			},
+			codex: {
+				title: "Codex Group",
+				date: "2023 – 2025 | On-Call Medical Scribe Trainer",
+				details: [
+					"Trained and mentored new emergency department scribes.",
+					"Documented 400+ patient charts monthly.",
+					"Developed standardized transcription protocols.",
+					"Created training resources and documentation guides."
+				]
+			},
+			lucky: {
+				title: "Lucky Lady Motel",
+				date: "2025 – Present | Property Manager",
+				details: [
+					"Manage daily property operations.",
+					"Develop onboarding materials and operational guides.",
+					"Coordinate vendors and resolve service issues.",
+					"Improve processes and operational consistency."
+				]
+			},
+			cvs: {
+				title: "CVS / Oak Street Health",
+				date: "2026 – Present | Clinical Informatics Specialist",
+				details: [
+					"Support providers with EHR navigation and clinical documentation.",
+					"Facilitate pre-visit workflows and chart preparation.",
+					"Support coding workflows and encounter completion.",
+					"Identify clinical workflow improvement opportunities."
+				]
+			}
+		};
+
+		const overlay = document.getElementById("overlay");
+		document.querySelectorAll(".landmark").forEach(button => {
+			button.addEventListener("click", () => {
+				const job = experiences[button.dataset.job];
+				document.getElementById("popupTitle").textContent = job.title;
+				document.getElementById("popupDate").textContent = job.date;
+				const list = document.getElementById("popupDetails");
+				list.replaceChildren();
+				job.details.forEach(detail => {
+					const item = document.createElement("li");
+					item.textContent = detail;
+					list.appendChild(item);
+				});
+				overlay.classList.add("active");
+			});
+		});
+		function closePopup() {
+			overlay.classList.remove("active");
+		}
+		overlay.addEventListener("click", event => {
+			if (event.target === overlay) closePopup();
+		});
+		document.addEventListener("keydown", event => {
+			if (event.key === "Escape") closePopup();
+		});
+	</script>
+</body>
+</html>
