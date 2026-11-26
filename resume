@@ -1,0 +1,328 @@
+%-------------------------
+% Ambience Healthcare - Clinician Support Specialist Resume
+% Author: Jasmin Ganti
+% ATS-optimized LaTeX version
+%-------------------------
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% Font Awesome
+\usepackage{fontawesome5}
+% Fixed width font
+\usepackage[scale=0.90,lf]{FiraMono}
+% Colors
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+% Helvetica-style font
+\usepackage[T1]{fontenc}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+% PDF text extraction
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+% Page formatting
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+% Section formatting
+\titleformat{\section}{
+  \bfseries\vspace{2pt}\raggedright\large
+}{}{0em}{}[\color{light-grey}\titlerule[2pt]\vspace{-4pt}]
+% Resume commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    #1 \vspace{-1pt}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & {\color{dark-grey}\small #2}\\
+    \textit{#3} & {\color{dark-grey}\small #4}\\
+  \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0in,label={}]
+}
+\newcommand{\resumeSubHeadingListEnd}{
+  \end{itemize}
+}
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[leftmargin=0.18in]
+}
+\newcommand{\resumeItemListEnd}{
+  \end{itemize}\vspace{0pt}
+}
+\renewcommand\labelitemii{
+  $\vcenter{\hbox{\tiny$\bullet$}}$
+}
+\color{text-grey}
+
+%-------------------------------------------
+% RESUME START
+%-------------------------------------------
+\begin{document}
+%----------HEADING----------
+\begin{center}
+  {\Huge\textbf{Jasmin}} \\ \vspace{5pt}
+  \small
+  \faPhone\ \texttt{702-7**-1**1}
+  \hspace{4pt}|
+  \hspace{4pt}
+  \faEnvelope\ \href{mailto:jg****@icloud.com}{jg0720@icloud.com}
+  \hspace{4pt}|
+  \hspace{4pt}
+  \faLinkedin\ \href{https://www.linkedin.com/in/jasmin}{LinkedIn}
+  \hspace{4pt}|
+  \hspace{4pt}
+  \faMapMarkerAlt\ Las Vegas, NV
+\end{center}
+%----------PROFESSIONAL SUMMARY----------
+\section{Professional Summary}
+\small{
+Healthcare technology and clinical documentation specialist
+with 10+ years of experience supporting physicians, clinical
+teams, and healthcare technology implementations across
+emergency and ambulatory settings. Experienced in
+troubleshooting EHR and documentation workflows, resolving
+provider-reported issues, optimizing AI-assisted clinical
+documentation, and translating clinician feedback into
+actionable operational improvements. Background in
+implementation management, quality assurance, provider
+onboarding, and clinical workflow training. Skilled at bridging
+the gap between clinical users and technical teams to improve
+platform adoption, documentation accuracy, and clinician
+experience.
+}
+%----------PROFESSIONAL EXPERIENCE----------
+\section{Professional Experience}
+\resumeSubHeadingListStart
+% CVS / OAK STREET
+\resumeSubheading
+{Clinical Informatics Specialist}{Sep 2026 -- Present}
+{CVS / Oak Street Health}{Remote}
+\resumeItemListStart
+\resumeItem{
+Support primary care providers with EHR navigation,
+clinical documentation, ICD-10/CPT coding workflows,
+care-gap tracking, and encounter completion.
+}
+\resumeItem{
+Identify documentation gaps and workflow inefficiencies
+during daily clinical operations, supporting accurate
+chart preparation and provider readiness.
+}
+\resumeItem{
+Facilitate pre-visit workflows, clinical data review,
+orders, referrals, and population health documentation
+to improve efficiency and continuity of care.
+}
+\resumeItemListEnd
+% PROPERTY MANAGEMENT
+\resumeSubheading
+{Property Manager}{May 2025 -- Present}
+{Lucky Lady Motel}{Las Vegas, NV}
+\resumeItemListStart
+\resumeItem{
+Serve as the primary point of contact for residents,
+ownership, and vendors, independently triaging service
+issues and coordinating timely resolutions.
+}
+\resumeItem{
+Develop operational documentation, process guides,
+and standardized communications to improve service
+consistency and operational efficiency.
+}
+\resumeItem{
+Track service requests, coordinate vendor escalations,
+and identify recurring operational issues requiring
+process improvements.
+}
+\resumeItemListEnd
+% CODEX GROUP
+\resumeSubheading
+{On-Call Medical Scribe}{Oct 2023 -- May 2025}
+{Codex Group}{Remote}
+\resumeItemListStart
+\resumeItem{
+Served as a frontline resource for emergency department
+physicians and clinical staff, addressing documentation,
+EHR workflow, and operational issues during high-volume
+clinical encounters.
+}
+\resumeItem{
+Documented 400+ patient charts monthly using advanced
+medical terminology and EHR workflows, maintaining
+documentation accuracy while reducing post-shift corrections.
+}
+\resumeItem{
+Identified recurring physician documentation preferences
+and workflow challenges, translating provider feedback
+into standardized practices for newly onboarded scribes.
+}
+\resumeItem{
+Communicated clinical findings, diagnostic results,
+treatment plans, orders, and disposition updates to
+support accurate and timely encounter documentation.
+}
+\resumeItemListEnd
+% LDMTS
+\resumeSubheading
+{Quality Management Specialist}{May 2022 -- Sep 2023}
+{LDMTS Inc.}{Remote}
+\resumeItemListStart
+\resumeItem{
+Collaborated with providers across multiple specialties
+to capture documentation preferences and improve
+SOAP note quality, including HPI, physical examinations,
+assessments, and treatment plans.
+}
+\resumeItem{
+Proactively addressed provider documentation concerns
+through EMR messaging, daily status updates, and
+structured onboarding surveys, strengthening clinician
+trust and improving note accuracy.
+}
+\resumeItem{
+Reviewed AI-assisted clinical documentation and
+identified quality discrepancies to support consistent
+documentation standards and provider satisfaction.
+}
+\resumeItemListEnd
+% ISCRIBEHEALTH
+\resumeSubheading
+{Implementation Project Manager}{Aug 2021 -- Jun 2022}
+{iScribeHealth}{Remote}
+\resumeItemListStart
+\resumeItem{
+Diagnosed and resolved clinical workflow and EHR-related
+challenges during provider implementations, partnering
+with clinical and operational stakeholders to improve
+system adoption and documentation reliability.
+}
+\resumeItem{
+Increased orthopedic clinic capacity by 40\% by
+optimizing pre- and post-visit documentation workflows,
+implementing templated order sets, and conducting
+ongoing EHR workflow reviews.
+}
+\resumeItem{
+Identified recurring onboarding and operational gaps,
+collaborating with HR and implementation stakeholders
+to align staffing, clinical workflows, and provider
+support requirements.
+}
+\resumeItem{
+Implemented quality assurance checkpoints across
+pre- and post-charting processes, reducing billing-related
+disruptions and improving documentation accuracy.
+}
+\resumeItemListEnd
+% SUPERIOR EMERGENCY PHYSICIANS
+\resumeSubheading
+{Lead Medical Scribe}{Nov 2018 -- Dec 2020}
+{Superior Emergency Physicians}{North Las Vegas, NV}
+\resumeItemListStart
+\resumeItem{
+Implemented a standardized end-of-shift summary
+template, improving provider handoffs, care continuity,
+and documentation consistency across incoming shifts.
+}
+\resumeItem{
+Reduced provider rework time by 50\% by implementing
+a real-time patient tracking system that helped scribes
+identify EHR errors and flag documentation discrepancies.
+}
+\resumeItemListEnd
+% SCRIBE AMERICA
+\resumeSubheading
+{Senior Chief Scribe}{Nov 2013 -- Jul 2018}
+{ScribeAmerica}{NY and GA}
+\resumeItemListStart
+\resumeItem{
+Led recruiting, onboarding, and training of 100+
+medical scribes across two major hospital systems,
+maintaining HIPAA compliance and reducing new-hire
+ramp-up time by 30\%.
+}
+\resumeItem{
+Managed cross-site shift coverage and scheduling
+logistics for 24/7 clinical operations, minimizing
+staffing disruptions and supporting provider workflows.
+}
+\resumeItem{
+Standardized discharge documentation protocols,
+contributing to a 25\% reduction in provider support
+tickets and improved EHR accuracy and completeness.
+}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+%----------EDUCATION----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Harvard Online}{2024}
+{Certificate: Data Science for Business}{Remote}
+\resumeSubheading
+{Emory University}{Jan 2016 -- Jun 2016}
+{Post-Baccalaureate Coursework in Biochemistry
+\& Physiology (with Lab)}{Atlanta, GA}
+\resumeSubheading
+{University of Rochester}{Aug 2009 -- May 2013}
+{Bachelor of Science in Neuroscience}{Rochester, NY}
+\resumeSubHeadingListEnd
+%----------SKILLS----------
+\section{Technical Skills \& Core Competencies}
+\begin{itemize}[leftmargin=0in,label={}]
+\small{\item{
+\textbf{Clinical Technology Support:}
+Clinician Support, Technical Troubleshooting,
+EHR Workflow Optimization, Provider Onboarding,
+User Enablement, Ticket Triage, Issue Escalation,
+Clinical Documentation Support \\
+\textbf{Quality \& Process Improvement:}
+Quality Assurance, Documentation Audits,
+Provider Feedback, Workflow Analysis,
+Process Improvement, SOP Development,
+Training Resources, Clinical Workflow Training \\
+\textbf{EHR Systems:}
+Epic, Cerner, Athenahealth, Allscripts,
+eClinicalWorks, InScribe \\
+\textbf{Support \& Productivity Tools:}
+Zendesk, Microsoft Office, Microsoft Dynamics,
+Trainual, Asana \\
+\textbf{Additional Skills:}
+Cross-functional Communication,
+Provider Preference Capture,
+90+ WPM Typing Speed, 98\% Typing Accuracy
+}}
+\end{itemize}
+%-------------------------------------------
+% END DOCUMENT
+%-------------------------------------------
+\end{document}
